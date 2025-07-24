@@ -167,7 +167,7 @@ export default function App() {
         <nav style={styles.navLinks}>
           <a style={styles.navLink} href="#about">About</a>
           <a style={styles.navLink} href="#projects">Projects</a>
-          <a style={styles.navLink} href="/hugo_tenthorey_resume.pdf" download>Resume</a>
+          <a style={styles.navLink} href="/Hugo_Tenthorey_Resume.pdf" download>Resume</a>
         </nav>
       </header>
 
