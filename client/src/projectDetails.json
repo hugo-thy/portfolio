@@ -1,0 +1,62 @@
+{
+  "iotNetworkResilience": {
+    "title": "IoT Network Resilience",
+    "description": "Graph-based models for resilient topologies using clustering analysis.",
+    "details": {
+      "domain": "Computer Science - 2024",
+      "summary": "The project focuses on modeling IoT network topologies to ensure resilience against device failures. By representing devices and their connections as graphs, the system compensates for sensor malfunctions by redistributing operational loads or repositioning devices to maintain network functionality.",
+      "language": "Python (OOP), Qt Designer (GUI)",
+      "keyTopics": "IoT, graph, resilience, network, modelization, resilience quantification",
+      "tools": "KNN clustering",
+      "features": "This project addresses the critical challenge of managing IoT networks, where devices have unique capabilities such as noise measurement, temperature sensing, or lidar usage. Each device operates within specific parameters like theoretical and actual range, with an operational state quantified on a scale from 0 (off) to 100 (full power), and a nominal value of 50.\nKey components of the project include:\n1. Topology Modeling\nDeveloped graph-based models to represent IoT network topologies, where nodes represent devices, and edges represent their connections. Incorporated device-specific characteristics, such as range and capacity, to create realistic and adaptable network structures.\n2. Resource Management\nIntegrated each device's unique capabilities into the topology to ensure efficient resource allocation and network performance.\n3. Operational State Monitoring\nDesigned systems to monitor and manage the operational states of devices, allowing dynamic adjustments to optimize network performance and enhance resilience.\n4. Connectivity Analysis\nAnalyzed connectivity between devices to identify potential failure points and strengthen network reliability. Implemented mechanisms to compensate for sensor failures by increasing the operational state of connected devices or repositioning nodes to bypass defective ones using clustering analysis."
+    }
+  },
+  "multiCameraSystem": {
+    "title": "Multi-Camera System",
+    "description": "Enhancing detection of abandoned luggage and tracking of owners in real-time.",
+    "details": {
+      "domain": "Computer Science - 2024-2025",
+      "summary": "MultiVisio is designed to enhance the detection of abandoned luggage and tracking of its owners in real-time. This software, integrated with an Android application for security agents, utilizes object detection and tracking algorithms combining traditional methods and deep learning to provide fast and reliable results. The project aims to streamline the process of identifying abandoned items and quickly locating their owners, improving efficiency and safety in public spaces like airports and train stations.",
+      "language": "Python, Dart",
+      "keyTopics": "Video and Image Processing, Tracking, Detection, Real Time, AI, Cloud computing, Model Training",
+      "tools": "YOLO, Deepsort, Kalman filter, Hungarian Algorithm, Pytorch",
+      "features": "The project is structured to handle multiple video streams from surveillance cameras, ensuring that it can operate effectively across various zones, each with distinct angles of view. The system is built around several core functionalities:\n1. Object Detection and Tracking: At the heart of MultiVisio is the combination of traditional object detection techniques and deep learning models. This hybrid approach allows the system to identify and track abandoned luggage and its owner across video feeds, even in the presence of occlusions. By leveraging state-of-the-art algorithms, the system is able to maintain real-time object detection and tracking even in dynamic environments.\n2. Real-Time Owner Identification: One of the most challenging aspects of the project was accurately linking an abandoned bag to its owner. This involves integrating facial recognition and tracking algorithms to associate individuals with the objects they carry, even as they move across different camera views. The system continuously updates the location and trajectory of both the bag and its owner, providing crucial information for security agents.\n3. Multi-Video Stream Management: The need to process multiple video streams simultaneously across different surveillance cameras posed a significant technical challenge. Our solution uses Cloud Computing to handle the large volumes of data generated, ensuring that video feeds from various zones can be processed in parallel without delay. This is critical for real-time decision-making in high-security environments.\n4. Android Application for Security Personnel: To facilitate the deployment of MultiVisio, an Android application was developed. This interface allows security agents to view the real-time status of abandoned baggage, track the movements of suspects, and manage alerts, all from their mobile devices. The app is optimized for ease of use, providing essential data in a user-friendly format, which enhances the operational efficiency of security personnel."
+    }
+  },
+  "smartGridDevelopment": {
+    "title": "Smart Grid Development",
+    "description": "Predictive tool for forecasting electricity consumption in smart grids.",
+    "details": {
+      "domain": "Computer Science - 2022-2023",
+      "summary": "In the context of smart distribution networks, anticipating energy demand is crucial for optimizing energy distribution and usage in urban settings. This project focuses on developing a predictive tool to forecast electricity consumption, enabling efficient energy management.",
+      "language": "Python",
+      "keyTopics": "Forecast, Smart grid, Machine learning, Consumption, Data, Regression",
+      "tools": "KNN, SVR, Bin-packing Algorithm",
+      "features": "This project leverages machine learning techniques to forecast electricity consumption and optimize energy distribution in a smart grid. Initially, a detailed data analysis was conducted to uncover temporal variations and identify key factors influencing energy demand. Two predictive algorithms were then developed and compared for their efficiency and accuracy.\nThe first algorithm utilized a basic k-Nearest Neighbors (KNN) regression approach, which predicts consumption based on the average of the nearest neighbors in the dataset. While simple to implement, this method provided a baseline for performance evaluation. The second algorithm employed a Support Vector Regressor (SVR), which uses a hyperplane to generalize predictions from the training data. The SVR was fine-tuned to balance bias and variance, offering a more sophisticated approach to prediction.\nBoth algorithms were trained on historical energy consumption data and tested against an isolated validation set. Their performance was evaluated using metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). The comparison revealed the strengths and limitations of each method, with the SVR outperforming the KNN regression in predictive accuracy and handling of complex consumption patterns. The final stage of the project integrated these forecasts with an optimization algorithm, enabling efficient allocation of energy production across diverse sources to meet demand while minimizing waste and costs."
+    }
+  },
+  "gnssAccuracyEnhancement": {
+    "title": "GNSS Accuracy Enhancement",
+    "description": "Improving GPS receiver accuracy from meter-level to millimeter-scale precision.",
+    "details": {
+      "domain": "Systems Research - 2024",
+      "summary": "This project explores satellite positioning systems, focusing on improving GPS receiver accuracy. Through data communication, processing, and analysis, we aimed to enhance positioning precision from meter-level accuracy to millimeter-scale precision, while comparing performance across receiver types.",
+      "language": "Python",
+      "keyTopics": "Satellite Positioning Systems, GPS Data Processing, Serial Communication, Error Correction Techniques, Precision Analysis",
+      "tools": "Serial library, Differential corrections, High-precision reference receivers",
+      "features": "The project began by establishing communication with GPS receivers through the serial port, using the serial library for real-time data exchange. Configuring the serial port involved defining parameters like baud rate, port name, and timeouts to ensure smooth and efficient data transfer. A multi-threaded approach was implemented to read data continuously without hindering the application’s responsiveness.\nOnce the raw GPS data was acquired, it underwent parsing to extract relevant information such as latitude, longitude, altitude, and timestamp. This data was visualized through a graphical interface to better understand positioning behavior. Advanced processing techniques, such as differential corrections and integration with higher-precision reference receivers, were employed to analyze and minimize errors, successfully narrowing down the margin of error. A comparative analysis between standard and high-precision receivers highlighted key performance differences, leading to insights on how to achieve millimeter-level accuracy.\nThis work not only demonstrates the intricacies of satellite positioning systems but also showcases my ability to combine real-time communication, data processing, and precision analysis to solve complex problems."
+    }
+  },
+  "swarmOfDronesSimulation": {
+    "title": "Swarm of Drones Simulation",
+    "description": "Simulating a swarm of drones tasked with mapping a designated area.",
+    "details": {
+      "domain": "Computer Science - 2024",
+      "summary": "This project simulates a swarm of drones tasked with mapping a designated area. The drones are programmed to fly in coordinated formations, maintaining safe distances and adapting to the constraints of the flight zone. The goal was to create an efficient system for managing drone movements, optimizing zone assignments, and ensuring complete coverage while avoiding collisions and adjusting to dynamic conditions.",
+      "language": "C",
+      "keyTopics": "Drones, IoT, Task management",
+      "tools": "Hungarian Algorithm",
+      "features": "This project focuses on simulating a swarm of drones designed to map a specific area efficiently. Each drone in the simulation is programmed to fly in coordinated formation, covering the target space while maintaining a minimal distance from one another to avoid collisions. The drones must adapt to the constraints of the flight zone, ensuring precise coverage while optimizing resource usage and enhancing safety.\nThe primary goal of the project was to develop a robust codebase capable of managing drone movements and coordination, while efficiently assigning them to various capture zones. The drone-to-zone assignment was optimized using the Hungarian algorithm, ensuring that each zone is assigned to a drone, and that the drones move to and capture their designated zones.\nThe system continuously updates the assignment of zones to drones based on their status, taking into account factors like damage or malfunction that might affect a drone’s capabilities. For instance, if a drone is damaged, its assigned zones are reassigned to other drones, and its resolution for capturing zones is adjusted accordingly. The movement of drones was tracked and displayed in real-time through a user interface, enabling dynamic reassignment and ensuring full coverage of the area. The project also incorporates safety checks to prevent drones from colliding while adjusting their paths to accommodate changes in the environment or unexpected challenges."
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import projectDetails from "./projectDetails.json";
 
 const styles = {
   container: {
@@ -117,45 +118,54 @@ const styles = {
   },
 };
 
+const projects = Object.values(projectDetails);
+
+const academicPath = [
+  {
+    year: "2020-2021",
+    title: "French Lycée Lyautey - Morocco",
+    description: "French Baccaleureate in Science with highest honors.",
+  },
+  {
+    year: "2021-2023",
+    title: "Lycée Thiers CPGE - France",
+    description:
+      "Two-year intensive undergraduate preparation courses in advanced mathematics, physics and computer science for the entrance exams to top French Engineering schools",
+  },
+  {
+    year: "2023-2024",
+    title: "ENSTA - Year 1",
+    description:
+      "First year in the engineering program at ENSTA, focusing on fundamental engineering sciences.",
+  },
+  {
+    year: "January 2024",
+    title: "Observation Internship - RATP Dev",
+    description:
+      "Embedded systems internship. Assisted the head of maintenance for embedded systems in Brest's public transport network.",
+  },
+  {
+    year: "2024-2025",
+    title: "ENSTA - Year 2",
+    description:
+      "Specialization in AI, computational theory and radar technologies.",
+  },
+  {
+    year: "Summer 2025",
+    title: "Engineering Internship - Cleverlytics",
+    description:
+      "Real-time LiDAR-camera fusion system for smart mining truck volume analysis.",
+  },
+  {
+    year: "Fall 2025",
+    title: "Heriot Watt University - MSc in AI",
+    description:
+      "Exchange semester at Heriot Watt Dubai focusing on AI, Machine Learning, and Data Science. International experience in a diverse academic environment.",
+  },
+];
+
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
-
-  const projects = [
-    {
-      title: "IoT Network Resilience",
-      description: "Graph-based models for resilient topologies using clustering analysis.",
-      details: {
-        domain: "Computer Science – 2024",
-        summary:
-          "Modeling IoT topologies as dynamic graphs to simulate sensor failures and recoveries, ensuring optimal information flow in case of device loss.",
-        language: "Python (OOP), Qt Designer",
-        keyTopics: "IoT, Graph Theory, Clustering, Resilience",
-        tools: "KNN, NetworkX, GraphLib",
-        features: [
-          "Dynamic graph-based topology",
-          "Real-time resilience metrics",
-          "GUI-based simulation control",
-        ],
-      },
-    },
-    {
-      title: "Multi-Camera Object Detection",
-      description: "YOLOv8 + DeepSORT for real-time abandoned luggage detection across multiple RTSP streams.",
-      details: {
-        domain: "AI & Computer Vision – 2024",
-        summary:
-          "Surveillance system detecting and tracking abandoned objects in crowded scenes via cross-stream fusion.",
-        language: "Python, OpenCV, PyTorch",
-        keyTopics: "Object Detection, Multi-Cam, Tracking",
-        tools: "YOLOv8, DeepSORT, OpenCV",
-        features: [
-          "Multi-camera fusion",
-          "Abandoned object detection logic",
-          "Real-time RTSP streaming support",
-        ],
-      },
-    },
-  ];
 
   return (
     <div style={styles.container}>
@@ -175,30 +185,90 @@ export default function App() {
         <h1 style={styles.title}>Engineering student</h1>
         <h2 style={styles.subtitle}>AI & Observation Systems</h2>
         <p style={{ ...styles.subtitle, textAlign: "justify" }}>
-          I am a passionate and dedicated student at ENSTA,
-          specializing in the transformative fields of machine
-          learning, data science, and radar technologies. My
-          journey has been defined by a relentless curiosity for
-          solving complex problems and an unwavering
-          commitment to personal and professional growth.
-          As the vice-president of the Junior-Entreprise, I've
-          honed my leadership skills by guiding teams through
-          innovative projects and fostering an environment of
-          collaboration and excellence. Balancing the demands of
-          academic rigor with hands-on experiences, I've
-          cultivated a strong work ethic that drives me to deliver
-          impactful results.
-          What sets me apart is my ability to blend technical
-          expertise with a human touch—whether it's mentoring
-          peers, leading group initiatives, or diving into the
-          intricacies of AI-driven systems. I thrive at the
-          intersection of technology and teamwork, always
-          seeking ways to bridge ideas with implementation.
+          I am a passionate and dedicated engineering student at ENSTA - Institut Polytechnique de Paris, specializing in Artificial Intelligence, data science, and radar-based observation systems. My academic path is driven by a deep curiosity for complex real-world problems, particularly in the fields of autonomous perception, sensor fusion, and AI-powered decision-making.
+        </p>
+        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
+          Throughout my journey, I've sought to combine theoretical excellence with practical impact. From developing a real-time detection and sensor fusion pipeline for industrial applications, to contributing to the automation of mining transport systems using LiDAR, cameras, and radar sensors during my internship at Cleverlytics (UM6P, Morocco), I thrive in building intelligent systems that bridge technology and field reality.
+        </p>
+        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
+          My experiences have been shaped by an international perspective, with projects and academic opportunities across France, Morocco, and the UAE — reinforcing my adaptability, cross-cultural awareness, and ability to contribute in diverse teams.
+        </p>
+        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
+          Previously, I served as Vice-President of ENSTA's Junior-Entreprise, where I led technical teams and coordinated innovation projects with industrial partners. While I no longer hold the position, this experience profoundly shaped my leadership approach, teaching me how to foster collaboration, accountability, and shared ambition.
+        </p>
+        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
+          What defines me is not just my technical skillset but also my ability to connect with people, share knowledge, and build solutions that make a difference.
+        </p>
+        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
+          I am now actively looking for internships or collaborations in the field of intelligent systems, automation, AI for industry, or data science, where I can continue to learn, contribute, and grow.
         </p>
       </section>
 
+      <section id="timeline" style={{ width: "100%", maxWidth: "900px", margin: "5rem auto", textAlign: "center" }}>
+        <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>Academic Path</h2>
+        <div style={{ position: "relative", margin: "0 auto", maxWidth: "600px", paddingLeft: "0px" }}>
+          {academicPath.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              style={{
+                marginBottom: "2.8rem",
+                display: "flex",
+                alignItems: "flex-start",
+                position: "relative",
+              }}
+              whileHover={{ scale: 1.1 }}
+            >
+              {/* Structured timeline into two columns */}
+              <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                {/* Left Column: Dots and Dates */}
+                <div style={{ position: "relative", width: "150px", textAlign: "right" }}>
+                  <span style={{ fontSize: "1rem", fontWeight: "600", color: "#fff" }}>
+                    {step.year}
+                  </span>
+                  <span
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      borderRadius: "50%",
+                      backgroundColor: "#fff",
+                      border: "2px solid #000",
+                      display: "inline-block",
+                      marginLeft: "0.5rem",
+                    }}
+                  ></span>
+                </div>
+
+                {/* Separator Line */}
+                <div style={{ width: "60px", backgroundColor: "#444", marginLeft: "10px" }}></div>
+
+                {/* Right Column: Title and Description */}
+                <div style={{ paddingLeft: "1rem", borderLeft: "2px solid #fff", textAlign: "left", flex: 1 }}>
+                  <h3
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: "600",
+                      color: "#fff",
+                      marginBottom: "0.3rem",
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p style={{ fontSize: "0.95rem", color: "#ccc", lineHeight: "1.6" }}>
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <section id="projects" style={{ marginBottom: "2rem" }}>
-        <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>Projects I have worked on</h2>
+        <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>Academic projects I have worked on</h2>
         <div style={styles.projectGallery}>
           {projects.map((project, index) => (
             <motion.div
@@ -239,29 +309,43 @@ export default function App() {
               <button style={styles.closeBtn} onClick={() => setSelectedProject(null)}>
                 &times;
               </button>
-              <h2>{selectedProject.title}</h2>
-              <div style={styles.projectDetailSection}>
-                <div style={styles.detailHeading}>Domain</div>
-                <div style={styles.detailContent}>{selectedProject.details.domain}</div>
+              <div style={{ borderBottom: "1px solid #333", marginBottom: "1rem", paddingBottom: "1rem" }}>
+                <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{selectedProject.title}</h2>
+                <p style={{ fontWeight: "600", color: "#aaa" }}>{selectedProject.details.domain}</p>
+              </div>
 
-                <div style={styles.detailHeading}>Summary</div>
-                <div style={styles.detailContent}>{selectedProject.details.summary}</div>
+              <p style={{ color: "#ccc", marginBottom: "2rem", lineHeight: "1.6" }}>
+                {selectedProject.details.summary}
+              </p>
 
-                <div style={styles.detailHeading}>Languages</div>
-                <div style={styles.detailContent}>{selectedProject.details.language}</div>
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                backgroundColor: "#000",
+                borderRadius: "8px",
+                marginBottom: "2rem",
+                padding: "1.5rem",
+                gap: "1rem",
+              }}>
+                <div>
+                  <h4 style={{ color: "#fff", marginBottom: "0.5rem" }}>LANGUAGE</h4>
+                  <p style={{ color: "#aaa", lineHeight: "1.5" }}>{selectedProject.details.language}</p>
+                </div>
+                <div>
+                  <h4 style={{ color: "#fff", marginBottom: "0.5rem" }}>KEY TOPICS</h4>
+                  <p style={{ color: "#aaa", lineHeight: "1.5" }}>{selectedProject.details.keyTopics}</p>
+                </div>
+                <div>
+                  <h4 style={{ color: "#fff", marginBottom: "0.5rem" }}>TOOLS</h4>
+                  <p style={{ color: "#aaa", lineHeight: "1.5" }}>{selectedProject.details.tools}</p>
+                </div>
+              </div>
 
-                <div style={styles.detailHeading}>Topics</div>
-                <div style={styles.detailContent}>{selectedProject.details.keyTopics}</div>
-
-                <div style={styles.detailHeading}>Tools</div>
-                <div style={styles.detailContent}>{selectedProject.details.tools}</div>
-
-                <div style={styles.detailHeading}>Main Features</div>
-                <ul style={{ paddingLeft: "1.2rem", color: "#aaa" }}>
-                  {selectedProject.details.features.map((f, i) => (
-                    <li key={i} style={{ marginBottom: "0.5rem" }}>{f}</li>
-                  ))}
-                </ul>
+              <div>
+                <h4 style={{ fontSize: "1.2rem", marginBottom: "0.5rem", color: "#fff" }}>Key Features</h4>
+                <p style={{ color: "#aaa", lineHeight: "1.8" }}>
+                  {selectedProject.details.features}
+                </p>
               </div>
             </motion.div>
           </motion.div>
