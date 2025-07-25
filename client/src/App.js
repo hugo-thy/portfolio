@@ -198,8 +198,6 @@ export default function App() {
         </p>
         <p style={{ ...styles.subtitle, textAlign: "justify" }}>
           What defines me is not just my technical skillset but also my ability to connect with people, share knowledge, and build solutions that make a difference.
-        </p>
-        <p style={{ ...styles.subtitle, textAlign: "justify" }}>
           I am now actively looking for internships or collaborations in the field of intelligent systems, automation, AI for industry, or data science, where I can continue to learn, contribute, and grow.
         </p>
       </section>
